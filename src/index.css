@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  background-color: #111111;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary;
+  }
+
+  .section {
+    @apply lg:h-screen flex items-start;
+  }
+
+  .btn-lg {
+    @apply py-3 px-8 text-white;
+  }
+}

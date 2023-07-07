@@ -20,6 +20,8 @@ export default {
       colors: {
         primary: "#080808",
         secondary: '#111111',
+        terciary: '#0AFF9D',
+        capitalice: '#232323'
       },
       backgroundImage: {
         site: "url('./assets/site-bg.jpg')",

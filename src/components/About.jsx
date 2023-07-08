@@ -5,11 +5,11 @@ import { aboutData, education } from "../data";
 
 const About = () => {
   return (
-    <section id="about" className="section">
+    <section id="about" className="pb-20">
       {aboutData.map((about, index) => {
         const { title, text1, text2, text3 } = about;
         return (
-          <div key={index}>
+          <div key={index} className="lg:pb-40">
             <div className="flex items-center relative justify-between">
               <h3 className="lg:text-[60px] text-[20px] text-nav uppercase font-extrabold">
                 {title}{" "}

@@ -3,16 +3,15 @@ import { experienceFusion, experienceMuni } from "../data";
 
 const Experience = () => {
   return (
-    <section id="experience" className="section">
-      <div className="flex items-center relative justify-between">
-        <h3 className="lg:text-[60px] text-[20px] text-nav uppercase font-extrabold">
+    <section id="experience" className="lg:my-32">
+      <div className="flex items-center justify-between " id="">
+        <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold relative">
           Experience
-          <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-5 lg:left-[370px] left-[52%]"></span>
+          <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-6 lg:left-[370px] left-[152px]"></span>
         </h3>
-
-        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[100px] text-right ml-6" />
+        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[120px]" />
       </div>
-      <div>
+      <div className="py-8">
         {experienceFusion.map((exp) => {
           const { id, company, year, position, respons, tags } = exp;
           return (
@@ -35,34 +34,43 @@ const Experience = () => {
                 </div>
                 <div>
                   {tags.map((tag, id) => {
-                    const { first, second, third, fourth, fifth, sixth, seventh, eighth } = tag;
+                    const {
+                      first,
+                      second,
+                      third,
+                      fourth,
+                      fifth,
+                      sixth,
+                      seventh,
+                      eighth,
+                    } = tag;
                     return (
                       <ul
                         key={id}
-                        className="flex justify-between w-full items-center pt-4"
+                        className="flex justify-normal gap-x-[20px] w-full items-center pt-4 flex-wrap  gap-y-4"
                       >
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {first}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {second}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {third}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {fourth}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {fifth}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {sixth}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {seventh}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
                           {eighth}
                         </li>
                       </ul>
@@ -97,22 +105,23 @@ const Experience = () => {
                 </div>
                 <div>
                   {tagsMuni.map((tag, id) => {
-                    const { firstMuni, secondMuni, thirdMuni, fourthMuni } = tag;
+                    const { firstMuni, secondMuni, thirdMuni, fourthMuni } =
+                      tag;
                     return (
                       <ul
                         key={id}
-                        className="flex justify-start flex-wrap lg:gap-x-16 items-center w-full pt-4"
+                        className="flex justify-normal gap-x-[20px] w-full items-center pt-4 flex-wrap gap-y-4"
                       >
-                        <li className="bg-capitalice text-nav px-4 py-2 rounded-[10px]">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {firstMuni}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 rounded-[10px]">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {secondMuni}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 rounded-[10px]">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {thirdMuni}
                         </li>
-                        <li className="bg-capitalice text-nav px-4 py-2 rounded-[10px]">
+                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
                           {fourthMuni}
                         </li>
                       </ul>

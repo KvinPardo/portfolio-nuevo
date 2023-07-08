@@ -18,12 +18,12 @@ const App = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto relative lg:px-0 pl-[70px]">
+      <div className="container mx-auto  lg:px-0 pl-[70px]">
         <Hero />
         <About />
         <Project />
         <Experience />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

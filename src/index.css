@@ -14,7 +14,7 @@
   }
 
   .section {
-    @apply h-screen 
+    @apply min-h-screen;
   }
 
   .btn-lg {

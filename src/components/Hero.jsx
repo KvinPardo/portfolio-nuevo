@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="section flex justify-center items-center w-full"
+      className="lg:pt-[300px] pt-[160px] pb-[250px] lg:pb-[400px] flex justify-center items-center w-full"
     >
       {heroData.map((data, index) => {
         const { name, title, subtitle, description } = data;

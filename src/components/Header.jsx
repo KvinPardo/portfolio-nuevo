@@ -5,7 +5,7 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const Header = () => {
   return (
-    <div className="w-full">
+    <div className="w-full relative">
       <div className="flex text-white items-center justify-between lg:gap-x-12 lg:p-2 lg:px-[30px] pr-4">
         <div className="flex lg:gap-x-6 gap-x-4">
           <a href="" className="">

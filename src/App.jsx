@@ -4,8 +4,8 @@ import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Project from "./components/Project";
-import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 
 const App = () => {
   return (
@@ -18,12 +18,12 @@ const App = () => {
         <Header />
       </div>
 
-      <div className="container mx-auto pl-[80px]">
+      <div className="container mx-auto relative lg:px-0 pl-[70px]">
         <Hero />
         <About />
         <Project />
         <Experience />
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );

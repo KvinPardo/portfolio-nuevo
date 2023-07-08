@@ -1,240 +1,78 @@
 import React from "react";
-import Project1 from "/project1.jpg";
-import { BsGithub } from "react-icons/bs";
-import { BiChevronRight } from "react-icons/bi";
-import { FiExternalLink } from "react-icons/fi";
+import { projectsData } from "../data";
+import { AiFillGithub } from "react-icons/ai";
+import { RiLiveLine } from "react-icons/ri";
 
 const Project = () => {
   return (
-    <section
-      id="projects"
-      className="flex justify-center items-center h-auto w-full flex-col"
-      name="projects"
-    >
-      <div className="flex gap-y-4 items-center w-full pl-14">
-        <div className="h-[1px] bg-capitalice/95 w-full" />
-        <div className="relative w-2/5">
-          <h3 className="lg:text-[65px] font-extrabold text-white leading-[1] w-full lg:px-14">
-            Proyectos
-          </h3>
-          <span className="bg-terciary absolute w-[18px] h-[18px] rounded-full lg:top-[50px] lg:right-[40px]"></span>
-        </div>
+    <section id="projects" className="px-12 lg:pb-40">
+      <div className="flex items-center relative justify-between lg:pb-12">
+        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[100px] ml-6" />
+        <h3 className="lg:text-[60px] text-[20px] text-nav uppercase font-extrabold mr-20 relative">
+          Proyectos
+          <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[55px] top-4 lg:left-[360px] left-10"></span>
+        </h3>
       </div>
-
-      <div className="container mx-auto py-14">
-        <div className="grid lg:grid-cols-2 grid-cols-1 w-full h-full lg:gap-x-12">
-          <div className="relative">
-            <div className="p-10 rounded-[20px] bg-capitalice relative h-[300px] overflow-hidden">
-              <div className="relative ">
-                <img src={Project1} alt="" className="w-full absolute top-20" />
-              </div>
-            </div>
-            <div className="flex justify-between items-center w-full lg:py-4">
-              <div>
-                <h3 className="lg:text-3xl text-nav">Paint.app</h3>
-              </div>
-              <div className="w-full bg-nav/20 mx-4">
-                <div className="h-[1px] w-full" />
-              </div>
-              <div className="flex gap-x-5">
-                <a href="">
-                  <BsGithub className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-                <a href="">
-                  <FiExternalLink className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-              </div>
-            </div>
-
-            <div className="">
-              <p className="text-nav">
-                A real-time coaching app for students learning to paint. This
-                app is my baby, designed and built on my own.
-                <a
-                  href=""
-                  className="border border-terciary flex items-center justify-center px-4 py-3 mt-3 w-[150px] text-terciary group hover:bg-terciary hover:text-capitalice transition-all hover:rounded-[10px]"
-                >
-                  Leer más{" "}
-                  <BiChevronRight className="group-hover:translate-x-2 transition-all " />
-                </a>
-              </p>
-            </div>
-
-            <div className="flex justify-start items-center w-full lg:py-4 lg:gap-x-6">
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="p-10 lg:pb-0 rounded-[20px] bg-capitalice relative">
+      <div className="grid lg:grid-cols-2 grid-cols-1 sm:grid-cols-2 w-full h-full gap-x-12 lg:gap-y-20 gap-y-10">
+        {projectsData.map((project, index) => {
+          const { image, title, description, tags } = project;
+          return (
+            <div key={index} className="">
               <div className="">
-                <img src={Project1} alt="" className="w-full p-12" />
+                <div className="relative bg-capitalice rounded-[15px] group overflow-hidden">
+                  <img
+                    src={`${image}.jpg`}
+                    alt=""
+                    className="lg:px-20 px-8 lg:pt-20 pt-8 group-hover:scale-105 transition-all duration-500 origin-top-right "
+                  />
+                </div>
+                <div className="flex flex-col w-full h-full p-4">
+                  <div className="flex items-center justify-between w-full">
+                    <h3 className="text-nav lg:text-3xl">{title}</h3>
+                    <div className="h-[1px] bg-capitalice lg:w-[350px] my-2 mt-5" />
+                    <div className="flex gap-x-4 mr-4">
+                      <a href="">
+                        <AiFillGithub className="text-2xl text-nav hover:text-terciary" />
+                      </a>
+                      <a href="">
+                        <RiLiveLine className="text-2xl text-nav hover:text-terciary" />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex">
+                    {tags.map((tag, index) => {
+                      console.log(tags);
+                      const { firstTag, secondTag, thirdTag, fourthTag } = tag;
+                      return (
+                        <ul
+                          key={index}
+                          className="flex justify-between w-full lg:py-5"
+                        >
+                          <li className="text-nav text-[16px] bg-capitalice p-2 rounded-[10px] py-1 hover:bg-terciary transition-all duration-300 hover:text-primary">
+                            #{firstTag}
+                          </li>
+                          <li className="text-nav text-[16px] bg-capitalice p-2 rounded-[10px] py-1 hover:bg-terciary transition-all duration-300 hover:text-primary">
+                            #{secondTag}
+                          </li>
+                          <li className="text-nav text-[16px] bg-capitalice p-2 rounded-[10px] py-1 hover:bg-terciary transition-all duration-300 hover:text-primary">
+                            #{thirdTag}
+                          </li>
+                          <li className="text-nav text-[16px] bg-capitalice p-2 rounded-[10px] py-1 hover:bg-terciary transition-all duration-300 hover:text-primary">
+                            #{fourthTag}
+                          </li>
+                        </ul>
+                      );
+                    })}
+                  </div>
+                  <div className="">
+                    <p className="lg:text-[18px] text-nav">{description}</p>
+                    <button>Leer más</button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex justify-between items-center w-full lg:py-4">
-              <div>
-                <h3 className="lg:text-3xl text-nav">Paint.app</h3>
-              </div>
-              <div className="w-full bg-nav/20 mx-4">
-                <div className="h-[1px] w-full" />
-              </div>
-              <div className="flex gap-x-5">
-                <a href="">
-                  <BsGithub className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-                <a href="">
-                  <FiExternalLink className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-              </div>
-            </div>
-
-            <div className="">
-              <p className="text-nav">
-                A real-time coaching app for students learning to paint. This
-                app is my baby, designed and built on my own.
-                <a
-                  href=""
-                  className=" flex items-center justify-center px-4 py-3 mt-3 w-[150px] text-terciary group hover:bg-terciary hover:text-capitalice transition-all hover:rounded-[10px]"
-                >
-                  Leer más{" "}
-                  <BiChevronRight className="group-hover:translate-x-2 transition-all" />
-                </a>
-              </p>
-            </div>
-
-            <div className="flex justify-start items-center w-full lg:py-4 lg:gap-x-6">
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:pt-12">
-            <div className="p-10 lg:pb-0 rounded-[20px] bg-capitalice relative">
-              <div className="">
-                <img src={Project1} alt="" className="w-full p-12" />
-              </div>
-            </div>
-            <div className="flex justify-between items-center w-full lg:py-4">
-              <div>
-                <h3 className="lg:text-3xl text-nav">Paint.app</h3>
-              </div>
-              <div className="w-full bg-nav/20 mx-4">
-                <div className="h-[1px] w-full" />
-              </div>
-              <div className="flex gap-x-5">
-                <a href="">
-                  <BsGithub className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-                <a href="">
-                  <FiExternalLink className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-              </div>
-            </div>
-
-            <div className="">
-              <p className="text-nav">
-                A real-time coaching app for students learning to paint. This
-                app is my baby, designed and built on my own.
-                <a
-                  href=""
-                  className=" flex items-center justify-center px-4 py-3 mt-3 w-[150px] text-terciary group hover:bg-terciary hover:text-capitalice transition-all hover:rounded-[10px]"
-                >
-                  Leer más{" "}
-                  <BiChevronRight className="group-hover:translate-x-2 transition-all" />
-                </a>
-              </p>
-            </div>
-
-            <div className="flex justify-start items-center w-full lg:py-4 lg:gap-x-6">
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:pt-12">
-            <div className="p-10 lg:pb-0 rounded-[20px] bg-capitalice relative">
-              <div className="">
-                <img src={Project1} alt="" className="w-full p-12" />
-              </div>
-            </div>
-            <div className="flex justify-between items-center w-full lg:py-4">
-              <div>
-                <h3 className="lg:text-3xl text-nav">Paint.app</h3>
-              </div>
-              <div className="w-full bg-nav/20 mx-4">
-                <div className="h-[1px] w-full" />
-              </div>
-              <div className="flex gap-x-5">
-                <a href="">
-                  <BsGithub className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-                <a href="">
-                  <FiExternalLink className="w-[30px] h-[30px] text-capitalice hover:text-terciary transition" />
-                </a>
-              </div>
-            </div>
-
-            <div className="">
-              <p className="text-nav">
-                A real-time coaching app for students learning to paint. This
-                app is my baby, designed and built on my own.
-                <a
-                  href=""
-                  className=" flex items-center justify-center px-4 py-3 mt-3 w-[150px] text-terciary group hover:bg-terciary hover:text-capitalice transition-all hover:rounded-[10px]"
-                >
-                  Leer más{" "}
-                  <BiChevronRight className="group-hover:translate-x-2 transition-all" />
-                </a>
-              </p>
-            </div>
-
-            <div className="flex justify-start items-center w-full lg:py-4 lg:gap-x-6">
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-              <div className="bg-terciary rounded-full p-1">
-                <span className="  text-capitalice text-[14px]">#Flutter</span>
-              </div>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 const heroData = [
   {
-    title: "Hola, me llamo Kevin",
-    subtitle: "Soy Programador Analista y",
-    subtitle2: "Desarrollador Web",
+    name: "Hola, me llamo Kevin",
+    title: "Soy Programador Analista y",
+    subtitle: "Desarrollador Web",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores nemo sed maiores perferendis provident cum, ipsam consequatur omnis dolorum, similique est?",
   },
@@ -54,9 +54,10 @@ const education = [
 const projectsData = [
   {
     id: 1,
-    image: "",
-    title: "React 1",
-    description: "lorem lorem lorem",
+    image: "project1",
+    title: "Página de Tatuajes",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [
       {
         firstTag: "HTML",
@@ -68,9 +69,10 @@ const projectsData = [
   },
   {
     id: 2,
-    image: "",
+    image: "project1",
     title: "React 2",
-    description: "lorem lorem lorem",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [
       {
         firstTag: "HTML",
@@ -82,9 +84,10 @@ const projectsData = [
   },
   {
     id: 3,
-    image: "",
+    image: "project1",
     title: "React 3",
-    description: "lorem lorem lorem",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [
       {
         firstTag: "HTML",
@@ -96,9 +99,10 @@ const projectsData = [
   },
   {
     id: 4,
-    image: "",
+    image: "project1",
     title: "React 4",
-    description: "lorem lorem lorem",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [
       {
         firstTag: "HTML",
@@ -110,4 +114,46 @@ const projectsData = [
   },
 ];
 
-export { heroData, aboutData, projectsData, education };
+const experienceFusion = [
+  {
+    id: 1,
+    company: "Fusion Agency",
+    position: "Desarrollador FrontEnd",
+    year: 2023,
+    respons:
+      "Encargado del desarrollo y mantención de sitios web, ecommerce y landing pages de clientes, tanto en Chile y en Perú, como regionales.",
+    tags: [
+      {
+        first: "HTML",
+        second: "CSS",
+        third: "Boostrap",
+        fourth: "WordPress",
+        fifth: "Elementor",
+        sixth: "Adobe XD",
+        seventh: "Adobe PS",
+        eighth: "Woocommerce",
+      },
+    ],
+  },
+];
+
+const experienceMuni = [
+  {
+    id: 1,
+    company: "Municipalidad de Ñuñoa",
+    position: "Desarrollador FrontEnd",
+    year: 2022,
+    respons:
+      "Encargado de mantención y creación de nuevas funcionalidades dentro del sitio web comunal.",
+    tagsMuni: [
+      {
+        firstMuni: "HTML",
+        secondMuni: "CSS",
+        thirdMuni: "WordPress",
+        fourthMuni: "Elementor",
+      },
+    ],
+  },
+];
+
+export { heroData, aboutData, projectsData, education, experienceFusion, experienceMuni };

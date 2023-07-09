@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { navData } from "../data";
 import { Link } from "react-scroll";
-import { AiFillSchedule, AiOutlineHome, AiOutlineSchedule } from "react-icons/ai";
+import {
+  AiFillSchedule,
+  AiOutlineHome,
+  AiOutlineSchedule,
+} from "react-icons/ai";
 import { MdWorkOutline } from "react-icons/md";
 import { AiOutlineProject } from "react-icons/ai";
 import { BsPhoneVibrate } from "react-icons/bs";
@@ -19,27 +23,47 @@ const Sidebar = () => {
         <div>
           <ul className="flex flex-col w-full h-full gap-y-6">
             <li>
-              <Link to="home" smooth={true} offset={0} duration={500} spy={true}>
-                <AiOutlineHome className="cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
+              <Link to="home" activeClass="active" smooth={true} duration={500}>
+                <AiOutlineHome className=" cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
               </Link>
             </li>
             <li>
-              <Link to="about" smooth={true} offset={0} duration={500} spy={true}>
+              <Link
+                to="about"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
                 <AiFillSchedule className="cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
               </Link>
             </li>
             <li>
-              <Link to="experience" smooth={true} offset={0} duration={500} spy={true}>
+              <Link
+                to="experience"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
                 <MdWorkOutline className="cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
               </Link>
             </li>
             <li>
-              <Link to="projects" smooth={true} offset={0} duration={500} spy={true}>
+              <Link
+                to="projects"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
                 <AiOutlineProject className="cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
               </Link>
             </li>
             <li>
-              <Link to="contact" smooth={true} offset={0} duration={500} spy={true}>
+              <Link
+                to="contact"
+                activeClass="active"
+                smooth={true}
+                duration={500}
+              >
                 <BsPhoneVibrate className="cursor-pointer w-[30px] h-[30px] text-capitalice  hover:text-nav hover:scale-110 transition-all duration-300" />
               </Link>
             </li>

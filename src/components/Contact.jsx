@@ -2,7 +2,7 @@ import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <section id="contact" className="lg:py-[100px] xl:pb-[300px] ">
+    <section id="contact" className="lg:py-[100px] py-[100px] pb-[100px] xl:pb-[300px] ">
       <div className="flex flex-col justify-center items-center py-20">
         <h3 className="lg:text-[70px] text-[40px] font-extrabold text-nav uppercase relative">
           Contact{" "}

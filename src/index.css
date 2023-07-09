@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 .active {
-  background-color: #111111;
-  border-top: 2px solid #0aff9d;
+  color: #0AFF9D;
 }
 
 @layer base {

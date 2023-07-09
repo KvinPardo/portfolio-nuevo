@@ -3,7 +3,7 @@ import { experienceFusion, experienceMuni } from "../data";
 
 const Experience = () => {
   return (
-    <section id="experience" className="lg:py-[200px] ">
+    <section id="experience" className="lg:py-[200px] py-32 ">
       <div className="flex items-center justify-between " id="">
         <div className="h-[1px] bg-capitalice lg:w-[620px] w-[120px]" />
         <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold relative pr-8">

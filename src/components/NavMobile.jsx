@@ -1,77 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import { navData } from "../data";
 import { Link } from "react-scroll";
 import Social from "./Social";
+import { CgMenuGridO } from "react-icons/cg";
+import { BiLogoGmail, BiWindowClose } from "react-icons/bi";
 
 const NavMobile = () => {
+  const [nav, setNav] = useState(false);
+  const handleClick = () => setNav(!nav);
+
   return (
-    <ul className=" top-0 left-0 w-full h-screen bg-secondary flex flex-col justify-center items-center gap-y-2 uppercase fixed -z-10 transition-all duration-300">
-      <li className="text-nav py-6 text-xl">Home</li>
-      <li className="text-nav py-6 text-xl">Acerca de mí</li>
-      <li className="text-nav py-6 text-xl">Experiencia</li>
-      <li className="text-nav py-6 text-xl">Proyectos</li>
-      <li className="text-nav py-6 text-xl">Contacto</li>
-    </ul>
-    // <nav className="w-full h-full flex flex-col justify-evenly overflow-hidden">
-    //   <ul className="flex flex-col justify-center items-center gap-y-6 py-6 mb-8">
-    //     <li>
-    //       <Link
-    //         to="home"
-    //         smooth={true}
-    //         offset={0}
-    //         duration={500}
-    //         className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
-    //       >
-    //         Home
-    //       </Link>
-    //     </li>
-    //     <li>
-    //       <Link
-    //         to="about"
-    //         smooth={true}
-    //         offset={0}
-    //         duration={500}
-    //         className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
-    //       >
-    //         Acerca de mí
-    //       </Link>
-    //     </li>
-    //     <li>
-    //       <Link
-    //         to="experience"
-    //         smooth={true}
-    //         offset={50}
-    //         duration={500}
-    //         className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
-    //       >
-    //         Experiencia
-    //       </Link>
-    //     </li>
-    //     <li>
-    //       <Link
-    //         to="projects"
-    //         smooth={true}
-    //         offset={50}
-    //         duration={500}
-    //         className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
-    //       >
-    //         Proyectos
-    //       </Link>
-    //     </li>
-    //     <li>
-    //       <Link
-    //         to="contact"
-    //         smooth={true}
-    //         offset={50}
-    //         duration={500}
-    //         className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
-    //       >
-    //         Contacto
-    //       </Link>
-    //     </li>
-    //   </ul>
-    //   <div></div>
-    // </nav>
+    <div className="">
+      <div
+        onClick={handleClick}
+        className="xl:hidden cursor-pointer p-2 text-2xl text-nav hover:text-terciary"
+      >
+        {!nav ? <CgMenuGridO /> : <BiWindowClose />}
+      </div>
+
+      <div
+        className={
+          !nav
+            ? "hidden transition-all duration-300 "
+            : "absolute transition-all duration-300"
+        }
+      >
+        <ul className="top-0 left-0 w-full h-screen bg-secondary flex flex-col justify-center items-center gap-y-2 uppercase fixed -z-10 transition-all duration-300">
+          <li className=" text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              to="home"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Home
+            </Link>
+          </li>
+          <li className="text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              offset={-100}
+              to="about"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Acerca de mí
+            </Link>
+          </li>
+          <li className="text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              offset={0}
+              to="experience"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Experiencia
+            </Link>
+          </li>
+          <li className="text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              offset={-100}
+              to="projects"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Proyectos
+            </Link>
+          </li>
+          <li className="text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              offset={0}
+              to="contact"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Contacto
+            </Link>
+          </li>
+        </ul>
+        <div className="">
+          <Social />
+        </div>
+      </div>
+    </div>
   );
 };
 

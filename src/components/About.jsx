@@ -12,7 +12,7 @@ const About = () => {
           <div key={index} className="lg:pb-40">
             <div className="flex items-center relative justify-between">
               <h3 className="lg:text-[60px] text-[20px] text-nav uppercase font-extrabold">
-                {title}{" "}
+                {title}
                 <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-5 lg:left-[36%] left-[52%]"></span>
               </h3>
 
@@ -40,17 +40,17 @@ const About = () => {
                     return (
                       <div
                         key={index}
-                        className="flex flex-col h-auto justify-start px-0 gap-y-4"
+                        className="flex flex-col h-auto justify-start px-0 lg:gap-y-4"
                       >
                         <div className="flex justify-between items-center w-full gap-y-12">
-                          <h3 className="text-nav flex items-center gap-x-4">
+                          <h3 className="text-nav flex items-center gap-x-4 text-[14px]">
                             <FaGraduationCap className="text-terciary" />
                             {name}
                           </h3>
-                          <p className="text-nav">{year}</p>
+                          <p className="text-nav text-[15px]">{year}</p>
                         </div>
                         <div className="flex justify-between items-center">
-                          <h3 className="text-nav">{title}</h3>
+                          <h3 className="text-nav text-[14px]">{title}</h3>
                           <a href="">
                             <BiLinkExternal className="text-terciary" />
                           </a>

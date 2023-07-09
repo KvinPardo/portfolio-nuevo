@@ -9,16 +9,16 @@ import Experience from "./components/Experience";
 
 const App = () => {
   return (
-    <div className="relative">
-      <div className="bg-primary fixed left-0 top-0 h-screen w-[60px] z-50">
+    <div className="relative mx-auto overflow-hidden">
+      <div className="bg-primary hidden lg:flex fixed left-0 top-0 h-screen z-50">
         <Sidebar />
       </div>
 
-      <div className="lg:px-[100px] w-full mx-auto pl-[70px] flex justify-between items-center backdrop-blur-xl z-10 fixed h-[70px]">
+      <div className="">
         <Header />
       </div>
 
-      <div className="container mx-auto  lg:px-0 pl-[70px]">
+      <div className="container mx-auto lg:px-0 px-8">
         <Hero />
         <About />
         <Project />

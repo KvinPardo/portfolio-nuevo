@@ -1,3 +1,14 @@
+const navData = {
+  items: [
+    { href: "/", name: "Home" },
+    { href: "/", name: "About" },
+    { href: "/", name: "Gallery" },
+    { href: "/", name: "Interview" },
+    { href: "/", name: "Articles" },
+    { href: "/", name: "Contact" },
+  ],
+};
+
 const heroData = [
   {
     name: "Hola, me llamo Kevin",
@@ -156,4 +167,12 @@ const experienceMuni = [
   },
 ];
 
-export { heroData, aboutData, projectsData, education, experienceFusion, experienceMuni };
+export {
+  navData,
+  heroData,
+  aboutData,
+  projectsData,
+  education,
+  experienceFusion,
+  experienceMuni,
+};

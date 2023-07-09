@@ -5,7 +5,7 @@ import { BsBriefcase, BsClipboardData, BsChatSquareText } from "react-icons/bs";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen">
+    <div className="xl:flex hidden flex-col w-[60px] ">
       <div className="flex justify-center items-center py-[12px]">
         <span className="text-white lg:w-[45px] w-[40px] h-[45px] rounded-full bg-black flex justify-center items-center">
           K

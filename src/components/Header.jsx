@@ -48,7 +48,7 @@ const Header = () => {
           </a>
         </div>
         <div className="xl:flex">
-          <button className="bg-terciary p-2 px-4">Resumen</button>
+          <button className="bg-nav p-2 px-4">Resumen</button>
         </div>
 
         <div className="lg:hidden ">

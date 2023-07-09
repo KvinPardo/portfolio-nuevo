@@ -3,6 +3,7 @@ import { navData } from "../data";
 import { Link } from "react-scroll";
 import Social from "./Social";
 import { CgMenuGridO } from "react-icons/cg";
+import { MdClose } from 'react-icons/md'
 import { BiLogoGmail, BiWindowClose } from "react-icons/bi";
 
 const NavMobile = () => {
@@ -15,7 +16,7 @@ const NavMobile = () => {
         onClick={handleClick}
         className="xl:hidden cursor-pointer p-2 text-2xl text-nav hover:text-terciary"
       >
-        {!nav ? <CgMenuGridO /> : <BiWindowClose />}
+        {!nav ? <CgMenuGridO /> : <MdClose />}
       </div>
 
       <div
@@ -86,9 +87,7 @@ const NavMobile = () => {
             </Link>
           </li>
         </ul>
-        <div className="">
-          <Social />
-        </div>
+
       </div>
     </div>
   );

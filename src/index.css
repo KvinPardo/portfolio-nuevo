@@ -13,7 +13,7 @@
   }
 
   .section {
-    @apply py-[40px] lg:py-[160px];
+    @apply py-8 lg:py-2 lg:h-screen;
   }
 
   .btn-lg {

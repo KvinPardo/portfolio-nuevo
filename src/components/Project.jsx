@@ -5,7 +5,7 @@ import { RiLiveLine } from "react-icons/ri";
 
 const Project = () => {
   return (
-    <section id="projects" className="lg:py-[10px]">
+    <section id="projects" className="lg:py-[100px]">
       <div className="flex items-center relative justify-between mt-20">
         <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold lg:mr-20 mr-5 relative">
           Proyectos

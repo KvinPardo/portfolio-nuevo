@@ -10,7 +10,7 @@ const About = () => {
   // console.log(aboutData);
 
   return (
-    <section className="lg:py-[300px] xl:pb-[160px] flex justify-center items-center h-full w-full" id="about">
+    <section className="lg:py-[200px] xl:pb-[160px] flex justify-center items-center h-full w-full" id="about">
       <div className="container mx-auto">
         <div className="flex items-center relative justify-between">
           <h3 className="lg:text-[60px] text-[19px] text-nav uppercase font-extrabold">

@@ -14,15 +14,14 @@ const App = () => {
         <Sidebar />
       </div>
 
-      <div className="">
-        <Header />
-      </div>
+      <Header />
 
       <div className="container mx-auto lg:px-0 px-8">
         <Hero />
         <About />
-        <Project />
         <Experience />
+        <Project />
+        
         <Contact />
       </div>
     </div>

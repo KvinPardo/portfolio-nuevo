@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { navData } from "../data";
+import { Link } from "react-scroll";
 
 const Sidebar = () => {
   const { items } = navData;
@@ -13,16 +14,21 @@ const Sidebar = () => {
       </div>
 
       <nav className="h-full">
-        <ul className="flex my-12 rotate-90 items-center gap-x-5">
+        <ul className="flex rotate-90 items-center">
           {items.map((item, index) => {
             return (
               <li key={index}>
-                <a
-                  href={item.href}
-                  className="text-nav cursor-pointer w-full flex justify-center items-center"
+                <Link
+                  to={item.to}
+                  name={item.name}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={1000}
+                  className="text-nav cursor-pointer w-full px-4 flex justify-center items-center hover:text-terciary transition duration-300 py-[18px] h-full hover:bg-capitalice hover:border-t-2 hover:border-terciary"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             );
           })}

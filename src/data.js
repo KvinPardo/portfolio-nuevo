@@ -1,11 +1,10 @@
 const navData = {
   items: [
-    { href: "/", name: "Home" },
-    { href: "/", name: "About" },
-    { href: "/", name: "Gallery" },
-    { href: "/", name: "Interview" },
-    { href: "/", name: "Articles" },
-    { href: "/", name: "Contact" },
+    { to: "home", name: "Home" },
+    { to: "about", name: "Acerca" },
+    { to: "experience", name: "Experiencia" },
+    { to: "projects", name: "Proyectos" },
+    { to: "contact", name: "Contacto" },
   ],
 };
 

@@ -5,13 +5,13 @@ import { RiLiveLine } from "react-icons/ri";
 
 const Project = () => {
   return (
-    <section id="projects" className="pb-28 lg:pb-0">
-      <div className="flex items-center relative justify-between ">
-        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[100px] ml-6" />
+    <section id="projects" className="lg:py-[10px] xl:pb-[120px]">
+      <div className="flex items-center relative justify-between mt-52">
         <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold lg:mr-20 mr-5 relative">
           Proyectos
           <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[55px] top-6 lg:left-[360px] left-[150px]"></span>
         </h3>
+        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[100px] ml-6" />
       </div>
       <div className="grid lg:grid-cols-2 grid-cols-1 sm:grid-cols-2 w-full h-full gap-x-12 lg:gap-y-8 pt-4 gap-y-10">
         {projectsData.map((project, index) => {
@@ -41,7 +41,7 @@ const Project = () => {
                   </div>
                   <div className="flex">
                     {tags.map((tag, index) => {
-                      console.log(tags);
+                      // console.log(tags);
                       const { firstTag, secondTag, thirdTag, fourthTag } = tag;
                       return (
                         <ul
@@ -66,7 +66,9 @@ const Project = () => {
                   </div>
                   <div className="">
                     <p className="lg:text-[18px] text-nav">{description}</p>
-                    <button className="btn-lg mt-4 border hover:border-terciary hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">Leer más</button>
+                    <button className="btn-lg mt-4 border hover:border-terciary hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
+                      Leer más
+                    </button>
                   </div>
                 </div>
               </div>

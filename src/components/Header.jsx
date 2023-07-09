@@ -23,23 +23,28 @@ const Header = () => {
     >
       <div className="flex justify-between h-full lg:px-[100px] px-10 items-center w-full relative">
         <div className="xl:flex hidden gap-x-5">
-          <a href="">
+          <a href="/" target="_blank">
             <BsGithub className="hover:text-terciary text-nav" />
           </a>
-          <a href="">
+          <a href="/" target="_blank">
             <BsLinkedin className="hover:text-terciary text-nav" />
           </a>
-          <a href="">
+          <a href="/" target="_blank">
             <BsWhatsapp className="hover:text-terciary text-nav" />
           </a>
         </div>
         <div className=" xl:flex">
           <button className="bg-terciary p-2 px-4">Resumen</button>
         </div>
-        <div 
+        <div
           onClick={() => setNavMobile(!navMobile)}
-          className="xl:hidden cursor-pointer transition ease-out duration-300">
-          <CgMenuGridO className={`${navMobile ? 'text-terciary' : 'text-nav'}  text-[25px]`} />
+          className="xl:hidden cursor-pointer transition ease-out duration-300"
+        >
+          <CgMenuGridO
+            className={`${
+              navMobile ? "text-terciary" : "text-nav"
+            } text-[25px]`}
+          />
         </div>
         <div
           className={`${navMobile ? "max-h-full" : "max-h-0"} 

@@ -3,13 +3,13 @@ import { experienceFusion, experienceMuni } from "../data";
 
 const Experience = () => {
   return (
-    <section id="experience" className="lg:my-32">
+    <section id="experience" className="lg:py-[200px] xl:pb-[160px]">
       <div className="flex items-center justify-between " id="">
-        <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold relative">
+        <div className="h-[1px] bg-capitalice lg:w-[620px] w-[120px]" />
+        <h3 className="lg:text-[60px] text-[25px] text-nav uppercase font-extrabold relative pr-8">
           Experience
           <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-6 lg:left-[370px] left-[155px]"></span>
         </h3>
-        <div className="h-[1px] bg-capitalice lg:w-[600px] w-[120px]" />
       </div>
       <div className="py-8">
         {experienceFusion.map((exp) => {

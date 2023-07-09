@@ -39,7 +39,7 @@ const Header = () => {
         <div 
           onClick={() => setNavMobile(!navMobile)}
           className="xl:hidden cursor-pointer transition ease-out duration-300">
-          <CgMenuGridO className="text-nav text-[25px]" />
+          <CgMenuGridO className={`${navMobile ? 'text-terciary' : 'text-nav'}  text-[25px]`} />
         </div>
         <div
           className={`${navMobile ? "max-h-full" : "max-h-0"} 

@@ -12,7 +12,7 @@ const NavMobile = () => {
             <li key={index}>
               <a
                 href={item.href}
-                className="text-2xl font-thin uppercase text-nav"
+                className="text-2xl font-thin uppercase text-nav hover:text-terciary transition duration-300"
               >
                 {item.name}
               </a>

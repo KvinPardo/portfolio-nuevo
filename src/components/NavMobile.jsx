@@ -3,7 +3,9 @@ import { navData } from "../data";
 import { Link } from "react-scroll";
 
 const NavMobile = () => {
-  const { items } = navData;
+
+  
+
 
   return (
     <nav className="w-full h-full flex flex-col justify-evenly overflow-hidden">

@@ -10,9 +10,7 @@ import Experience from "./components/Experience";
 const App = () => {
   return (
     <div className="relative mx-auto overflow-hidden">
-      <div className="bg-primary hidden lg:flex fixed left-0 top-0 h-screen z-50">
-        <Sidebar />
-      </div>
+      <Sidebar />
 
       <Header />
 
@@ -21,7 +19,7 @@ const App = () => {
         <About />
         <Experience />
         <Project />
-        
+
         <Contact />
       </div>
     </div>

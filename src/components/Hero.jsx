@@ -2,6 +2,7 @@ import { Link } from "react-scroll";
 import { heroData } from "../data";
 import { BiChevronRight } from "react-icons/bi";
 
+
 const Hero = () => {
   return (
     <section
@@ -24,7 +25,6 @@ const Hero = () => {
                 to="projects"
                 smooth={true}
                 spy={true}
-                offset={-200}
                 className="btn-lg cursor-pointer lg:w-[250px] w-full mt-4 border-terciary border flex items-center justify-center group hover:bg-terciary hover:text-primary transition duration-300"
               >
                 Ver Proyectos{" "}

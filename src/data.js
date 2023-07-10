@@ -1,5 +1,3 @@
-
-
 const navData = {
   items: [
     { to: "home", name: "Home" },

@@ -7,6 +7,7 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
 
+
 const App = () => {
   return (
     <div className="relative mx-auto overflow-hidden">
@@ -14,7 +15,7 @@ const App = () => {
 
       <Header />
 
-      <div className="container mx-auto lg:px-0 px-8">
+      <div className="container mx-auto lg:px-0 px-8 z-50">
         <Hero />
         <About />
         <Experience />

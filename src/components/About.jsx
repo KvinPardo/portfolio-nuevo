@@ -5,20 +5,47 @@ import { aboutData, education } from "../data";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.6,
+    },
+  },
+};
+
 const About = () => {
   // destructure about
   // console.log(aboutData);
 
   return (
-    <section className="lg:py-[200px] xl:pb-[160px] flex justify-center items-center h-full w-full" id="about">
+    <section
+      className="lg:py-[200px] xl:pb-[160px] flex justify-center items-center h-full w-full"
+      id="about"
+    >
       <div className="container mx-auto">
-        <div className="flex items-center relative justify-between">
-          <h3 className="lg:text-[60px] text-[19px] text-nav uppercase font-extrabold">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView={"show"}
+          className="flex items-center relative justify-between"
+        >
+          <motion.h3
+            variants={fadeIn("down")}
+            className="lg:text-[60px] text-[22px] text-nav uppercase font-extrabold"
+          >
             Acerca de mí
-            <span className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-5"></span>
-          </h3>
-          <div className="h-[1px] bg-capitalice lg:w-[620px] w-[120px]" />
-        </div>
+            <motion.span
+              variants={fadeIn("left")}
+              className="bg-terciary absolute lg:w-[15px] lg:h-[15px] w-[8px] h-[8px] rounded-full lg:top-[60px] top-5"
+            ></motion.span>
+          </motion.h3>
+          <motion.div
+            variants={fadeIn("down")}
+            className="h-[1px] bg-capitalice lg:w-[620px] w-[120px]"
+          />
+        </motion.div>
 
         <div className="flex justify-center items-center h-full w-full flex-col lg:flex-row">
           {aboutData.map((about, index) => {
@@ -26,17 +53,31 @@ const About = () => {
 
             return (
               <div key={index} className="flex flex-col lg:flex-row">
-                <div className="flex-col justify-center items-center w-full h-full">
-                  <p className="font-light text-[15px] lg:text-[20px] my-4 text-white first-letter:bg-capitalice first-letter:rounded-lg first-line:uppercase  first-letter:text-3xl first-letter:p-2 first-letter:font-bold first-letter:text-white first-letter:mr-3 first-letter:float-left">
+                <motion.div
+                  variants={container}
+                  initial="hidden"
+                  whileInView={"show"}
+                  className="flex-col justify-center items-center w-full h-full"
+                >
+                  <motion.p
+                    variants={fadeIn("right")}
+                    className="font-light text-[15px] lg:text-[20px] my-4 text-white first-letter:bg-capitalice first-letter:rounded-lg first-line:uppercase  first-letter:text-3xl first-letter:p-2 first-letter:font-bold first-letter:text-white first-letter:mr-3 first-letter:float-left"
+                  >
                     {text1}
-                  </p>
-                  <p className="font-light text-[15px] lg:text-[20px] my-4 text-nav">
+                  </motion.p>
+                  <motion.p
+                    variants={fadeIn("left")}
+                    className="font-light text-[15px] lg:text-[20px] my-4 text-nav"
+                  >
                     {text2}
-                  </p>
-                  <p className="font-light text-[15px] lg:text-[20px] my-4 text-nav">
+                  </motion.p>
+                  <motion.p
+                    variants={fadeIn("right")}
+                    className="font-light text-[15px] lg:text-[20px] my-4 text-nav"
+                  >
                     {text3}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </div>
             );
           })}
@@ -49,17 +90,44 @@ const About = () => {
                   key={index}
                   className="flex flex-col h-full justify-start px-0 lg:gap-y-4 w-full"
                 >
-                  <div className="flex justify-between items-center w-full gap-y-12">
-                    <h3 className="text-nav flex items-center gap-x-4 text-[14px] lg:text-[18px]">
+                  <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView={"show"}
+                    className="flex justify-between items-center w-full gap-y-12"
+                  >
+                    <motion.h3
+                      variants={fadeIn("right")}
+                      className="text-nav flex items-center gap-x-4 text-[14px] lg:text-[18px]"
+                    >
                       <FaGraduationCap className="text-terciary" />
                       {name}
-                    </h3>
-                    <p className="text-nav text-[15px]">{year}</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <h3 className="text-nav text-[14px]">{title}</h3>
-                  </div>
-                  <div className="h-[1px] bg-capitalice w-full my-2 mt-5" />
+                    </motion.h3>
+                    <motion.p
+                      variants={fadeIn("left")}
+                      className="text-nav text-[15px]"
+                    >
+                      {year}
+                    </motion.p>
+                  </motion.div>
+                  <motion.div
+                    variants={container}
+                    initial="hidden"
+                    whileInView={"show"}
+                    className="flex justify-between items-center"
+                  >
+                    <motion.h3
+                      variants={fadeIn("right")}
+                      className="text-nav text-[14px]"
+                    >
+                      {title}
+                      <span></span>
+                    </motion.h3>
+                  </motion.div>
+                  <motion.div
+                    variants={fadeIn("right")}
+                    className="h-[1px] bg-capitalice w-full my-2 mt-5"
+                  />
                 </div>
               );
             })}

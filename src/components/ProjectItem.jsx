@@ -60,10 +60,10 @@ const ProjectItem = ({ project }) => {
               whileInView={"show"}
               className="flex gap-x-4 mr-4"
             >
-              <motion.a variants={fadeIn("left")} href="">
+              <motion.a variants={fadeIn("left")} href="/">
                 <AiFillGithub className="text-2xl text-nav hover:text-terciary" />
               </motion.a>
-              <motion.a variants={fadeIn("left")} href="">
+              <motion.a variants={fadeIn("left")} href="/">
                 <RiLiveLine className="text-2xl text-nav hover:text-terciary" />
               </motion.a>
             </motion.div>

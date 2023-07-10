@@ -48,7 +48,7 @@ const Contact = () => {
         >
           <motion.a 
             variants={fadeIn("up")}
-            href=""
+            href="https://api.whatsapp.com/send?phone=56990914436"
             className="flex-1 text-nav hover:text-terciary flex gap-x-4 items-center justify-center"
           >
             <AiOutlineWhatsApp className="text-[20px]" />

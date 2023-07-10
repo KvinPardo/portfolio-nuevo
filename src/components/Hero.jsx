@@ -28,7 +28,7 @@ const Hero = () => {
               variants={container}
               initial="hidden"
               whileInView={"show"}
-              className="flex flex-col"
+              className="flex flex-col w-full h-full"
             >
               <motion.h3
                 variants={fadeIn("down")}

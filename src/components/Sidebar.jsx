@@ -29,62 +29,29 @@ const Sidebar = () => {
           <strong className="text-nav">K</strong>
         </span>
         <motion.div variants={container} initial="hidden" whileInView={"show"}>
-          <motion.ul
-            variants={fadeIn("right")}
-            className="flex flex-col w-full h-full gap-y-6"
-          >
-            <Link
-              variants={container}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.3 }}
-            >
-              <Link
-                to="home"
-                activeClass="active"
-                smooth={true}
-                duration={1000}
-              >
+          <motion.ul className="flex flex-col w-full h-full gap-y-6">
+            <motion.li variants={fadeIn("right")}>
+              <Link to="home" smooth={true} duration={1000}>
                 <AiOutlineHome className=" cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
-            </Link>
+            </motion.li>
             <motion.li variants={fadeIn("right")}>
-              <Link
-                to="about"
-                activeClass="active"
-                smooth={true}
-                duration={1000}
-              >
+              <Link to="about" smooth={true} duration={1000}>
                 <AiFillSchedule className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
             </motion.li>
             <motion.li variants={fadeIn("right")}>
-              <Link
-                to="experience"
-                activeClass="active"
-                smooth={true}
-                duration={1000}
-              >
+              <Link to="experience" smooth={true} duration={1000}>
                 <MdWorkOutline className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
             </motion.li>
             <motion.li variants={fadeIn("right")}>
-              <Link
-                to="projects"
-                activeClass="active"
-                smooth={true}
-                duration={1000}
-              >
+              <Link to="projects" smooth={true} duration={1000}>
                 <AiOutlineProject className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
             </motion.li>
             <motion.li variants={fadeIn("right")}>
-              <Link
-                to="contact"
-                activeClass="active"
-                smooth={true}
-                duration={1000}
-              >
+              <Link to="contact" smooth={true} duration={1000}>
                 <BsPhoneVibrate className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
             </motion.li>

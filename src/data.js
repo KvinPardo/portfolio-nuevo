@@ -123,7 +123,7 @@ const projectsData = [
   },
 ];
 
-const experienceFusion = [
+const experience = [
   {
     id: 1,
     company: "Fusion Agency",
@@ -144,33 +144,26 @@ const experienceFusion = [
       },
     ],
   },
+  
 ];
 
-const experienceMuni = [
-  {
-    id: 1,
-    company: "Municipalidad de Ñuñoa",
-    position: "Desarrollador FrontEnd",
-    year: 2022,
-    respons:
-      "Encargado de mantención y creación de nuevas funcionalidades dentro del sitio web comunal.",
-    tagsMuni: [
-      {
-        firstMuni: "HTML",
-        secondMuni: "CSS",
-        thirdMuni: "WordPress",
-        fourthMuni: "Elementor",
-      },
-    ],
-  },
-];
+// const experienceMuni = [
+//   {
+//     id: 1,
+//     company: "Municipalidad de Ñuñoa",
+//     position: "Desarrollador FrontEnd",
+//     year: 2022,
+//     respons:
+//       "Encargado de mantención y creación de nuevas funcionalidades dentro del sitio web comunal.",
+//     tags: [
+//       {
+//         firstMuni: "HTML",
+//         secondMuni: "CSS",
+//         thirdMuni: "WordPress",
+//         fourthMuni: "Elementor",
+//       },
+//     ],
+//   },
+// ];
 
-export {
-  navData,
-  heroData,
-  aboutData,
-  projectsData,
-  education,
-  experienceFusion,
-  experienceMuni,
-};
+export { navData, heroData, aboutData, projectsData, education, experience };

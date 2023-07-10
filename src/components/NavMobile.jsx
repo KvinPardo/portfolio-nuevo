@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { navData } from "../data";
+
 import { Link } from "react-scroll";
-import Social from "./Social";
+
 import { CgMenuGridO } from "react-icons/cg";
-import { MdClose } from 'react-icons/md'
-import { BiLogoGmail, BiWindowClose } from "react-icons/bi";
+import { MdClose } from "react-icons/md";
 
 const NavMobile = () => {
   const [nav, setNav] = useState(false);
@@ -87,7 +86,6 @@ const NavMobile = () => {
             </Link>
           </li>
         </ul>
-
       </div>
     </div>
   );

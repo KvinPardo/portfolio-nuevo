@@ -1,7 +1,8 @@
 import React from "react";
-import { experienceFusion, experienceMuni } from "../data";
+import { experience } from "../data";
 import { fadeIn } from "../variants";
 import { motion } from "framer-motion";
+import ExperienceItem from "./ExperienceItem";
 
 const container = {
   hidden: {},
@@ -33,185 +34,68 @@ const Experience = () => {
         </motion.h3>
       </motion.div>
       <div className="py-8">
-        {experienceFusion.map((exp) => {
-          const { id, company, year, position, respons, tags } = exp;
-          return (
-            <div key={id}>
-              {/* description */}
-              <div className="w-full h-full lg:pt-12">
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                  className="flex justify-between items-center w-full"
-                >
-                  <motion.h3
-                    variants={fadeIn("right")}
-                    className="text-[22px] text-white font-extrabold"
-                  >
-                    {company}
-                  </motion.h3>
-                  <motion.p
-                    variants={fadeIn("right")}
-                    className="text-nav lg:text-[20px] text-[14px] font-thin"
-                  >
-                    {year}
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                  className="w-full h-full"
-                >
-                  <motion.h3
-                    variants={fadeIn("left")}
-                    className="text-terciary lg:pt-2 font-bold text-[20px]"
-                  >
-                    {position}
-                  </motion.h3>
-                  <motion.p
-                    variants={fadeIn("left")}
-                    className="text-nav font-thin lg:text-[18px] text-[16px] leading-6 lg:pt-2"
-                  >
-                    {respons}
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                >
-                  {tags.map((tag, id) => {
-                    const {
-                      first,
-                      second,
-                      third,
-                      fourth,
-                      fifth,
-                      sixth,
-                      seventh,
-                      eighth,
-                    } = tag;
-                    return (
-                      <motion.li
-                        variants={fadeIn("up")}
-                        key={id}
-                        className="list-none flex justify-normal lg:gap-x-[20px] gap-x-[10px] w-full items-center pt-4 flex-wrap gap-y-4"
-                      >
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {first}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {second}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {third}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {fourth}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {fifth}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {sixth}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {seventh}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300">
-                          {eighth}
-                        </li>
-                      </motion.li>
-                    );
-                  })}
-                </motion.div>
-              </div>
-            </div>
-          );
-        })}
+        {experience.map((exp, id) => (
+          <ExperienceItem key={id} exp={exp} />
+        ))}
       </div>
-      <div>
-        {experienceMuni.map((expMuni, id) => {
-          const { company, year, position, respons, tagsMuni } = expMuni;
-          return (
-            <div key={id}>
-              {/* description */}
-              <div className="w-full h-full lg:pt-12">
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                  className="flex justify-between items-center w-full"
-                >
-                  <motion.h3
-                    variants={fadeIn("right")}
-                    className="text-[22px] text-white font-extrabold"
-                  >
-                    {company}
-                  </motion.h3>
-                  <motion.p
-                    variants={fadeIn("left")}
-                    className="text-nav text-[20px] font-thin"
-                  >
-                    {year}
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                  className="w-full h-full"
-                >
-                  <motion.h3
-                    variants={fadeIn("left")}
-                    className="text-terciary lg:pt-2 font-bold text-[20px]"
-                  >
-                    {position}
-                  </motion.h3>
-                  <motion.p
-                    variants={fadeIn("right")}
-                    className="text-nav font-thin text-[18px] leading-6 lg:pt-2"
-                  >
-                    {respons}
-                  </motion.p>
-                </motion.div>
-                <motion.div
-                  variants={container}
-                  initial="hidden"
-                  whileInView={"show"}
-                >
-                  {tagsMuni.map((tag, id) => {
-                    const { firstMuni, secondMuni, thirdMuni, fourthMuni } =
-                      tag;
-                    return (
-                      <motion.ul
-                        variants={fadeIn("up")}
-                        key={id}
-                        className="flex justify-normal lg:gap-x-[20px] gap-x-[10px] w-full items-center pt-4 flex-wrap gap-y-4"
-                      >
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {firstMuni}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {secondMuni}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {thirdMuni}
-                        </li>
-                        <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
-                          {fourthMuni}
-                        </li>
-                      </motion.ul>
-                    );
-                  })}
-                </motion.div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView={"show"}
+        className="flex justify-between items-center w-full"
+      >
+        <motion.h3
+          variants={fadeIn("right")}
+          className="text-[22px] text-white font-extrabold"
+        >
+          Municipalidad de Ñuñoa
+        </motion.h3>
+        <motion.p
+          variants={fadeIn("left")}
+          className="text-nav lg:text-[20px] text-[14px] font-thin"
+        >
+          2022
+        </motion.p>
+      </motion.div>
+
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView={"show"}
+        className="w-full h-full"
+      >
+        <motion.h3
+          variants={fadeIn("left")}
+          className="text-terciary lg:pt-2 font-bold text-[20px]"
+        >
+          Desarrollador FrontEnd
+        </motion.h3>
+        <motion.p
+          variants={fadeIn("left")}
+          className="text-nav font-thin lg:text-[18px] text-[16px] leading-6 lg:pt-2"
+        >
+          Encargado de mantención y creación de nuevas funcionalidades dentro
+          del sitio web comunal.
+        </motion.p>
+      </motion.div>
+      <motion.div variants={container} initial="hidden" whileInView={"show"}>
+        <motion.ul 
+          variants={fadeIn("left")}
+          className="flex justify-normal lg:gap-x-[20px] gap-x-[10px] w-full items-center pt-4 flex-wrap gap-y-4">
+          <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
+            HTML
+          </li>
+          <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
+            CSS
+          </li>
+          <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
+            WordPress
+          </li>
+          <li className="bg-capitalice text-nav px-3 py-2 hover:rounded-[10px] hover:bg-terciary hover:text-capitalice transition-all duration-300 text-[14px]">
+            Elementor
+          </li>
+        </motion.ul>
+      </motion.div>
     </section>
   );
 };

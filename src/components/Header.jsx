@@ -38,13 +38,13 @@ const Header = () => {
           whileInView={"show"}
           className="xl:flex hidden gap-x-5"
         >
-          <motion.a variants={fadeIn("down")} href="/" target="_blank">
+          <motion.a variants={fadeIn("down")} href="https://github.com/KvinPardo" target="_blank">
             <BsGithub className="hover:text-terciary text-nav" />
           </motion.a>
-          <motion.a variants={fadeIn("down")} href="/" target="_blank">
+          <motion.a variants={fadeIn("down")} href="https://www.linkedin.com/in/kevinpardoveas/" target="_blank">
             <BsLinkedin className="hover:text-terciary text-nav" />
           </motion.a>
-          <motion.a variants={fadeIn("down")} href="/" target="_blank">
+          <motion.a variants={fadeIn("down")} href="https://api.whatsapp.com/send?phone=56990914436" target="_blank">
             <BsWhatsapp className="hover:text-terciary text-nav" />
           </motion.a>
         </motion.div>

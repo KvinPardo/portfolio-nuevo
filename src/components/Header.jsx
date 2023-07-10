@@ -38,26 +38,43 @@ const Header = () => {
           whileInView={"show"}
           className="xl:flex hidden gap-x-5"
         >
-          <motion.a variants={fadeIn("down")} href="https://github.com/KvinPardo" target="_blank">
+          <motion.a
+            variants={fadeIn("down")}
+            href="https://github.com/KvinPardo"
+            target="_blank"
+          >
             <BsGithub className="hover:text-terciary text-nav" />
           </motion.a>
-          <motion.a variants={fadeIn("down")} href="https://www.linkedin.com/in/kevinpardoveas/" target="_blank">
+          <motion.a
+            variants={fadeIn("down")}
+            href="https://www.linkedin.com/in/kevinpardoveas/"
+            target="_blank"
+          >
             <BsLinkedin className="hover:text-terciary text-nav" />
           </motion.a>
-          <motion.a variants={fadeIn("down")} href="https://api.whatsapp.com/send?phone=56990914436" target="_blank">
+          <motion.a
+            variants={fadeIn("down")}
+            href="https://api.whatsapp.com/send?phone=56990914436"
+            target="_blank"
+          >
             <BsWhatsapp className="hover:text-terciary text-nav" />
           </motion.a>
         </motion.div>
-        <div className="lg:flex">
-          <motion.div
-            variants={fadeIn("down")}
+        <motion.div
+          variants={header}
+          initial="hidden"
+          whileInView={"show"}
+          className="lg:flex"
+        >
+          <motion.a
+            variants={fadeIn("left")}
             href="kevin-cv.pdf"
             target="_blank"
-            className="bg-nav p-2 px-4 hover:bg-terciary transition-all duration-300 hover:text-primary cursor-pointer"
+            className="bg-nav p-2 px-4 hover:bg-terciary  hover:text-primary cursor-pointer"
           >
             Resumen
-          </motion.div>
-        </div>
+          </motion.a>
+        </motion.div>
 
         <div className="lg:hidden ">
           <NavMobile />

@@ -49,7 +49,7 @@ const About = () => {
 
         <div className="flex justify-center items-center h-full w-full flex-col lg:flex-row">
           {aboutData.map((about, index) => {
-            const { text1, text2, text3 } = about;
+            const { text1, text2, text3, text4 } = about;
 
             return (
               <div key={index} className="flex flex-col lg:flex-row">
@@ -61,7 +61,7 @@ const About = () => {
                 >
                   <motion.p
                     variants={fadeIn("right")}
-                    className="font-light text-[15px] lg:text-[20px] my-4 text-white first-letter:bg-capitalice first-letter:rounded-lg first-line:uppercase  first-letter:text-3xl first-letter:p-2 first-letter:font-bold first-letter:text-white first-letter:mr-3 first-letter:float-left"
+                    className="font-light text-[15px] lg:text-[20px] my-4 text-white first-letter:bg-capitalice first-letter:rounded-lg first-letter:text-3xl first-letter:p-2 first-letter:font-bold first-letter:text-white first-letter:mr-3 first-letter:float-left"
                   >
                     {text1}
                   </motion.p>
@@ -76,6 +76,12 @@ const About = () => {
                     className="font-light text-[15px] lg:text-[20px] my-4 text-nav"
                   >
                     {text3}
+                  </motion.p>
+                  <motion.p
+                    variants={fadeIn("left")}
+                    className="font-light text-[15px] lg:text-[20px] my-4 text-nav"
+                  >
+                    {text4}
                   </motion.p>
                 </motion.div>
               </div>

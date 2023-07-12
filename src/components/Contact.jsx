@@ -35,10 +35,8 @@ const Contact = () => {
           variants={fadeIn("right")}
           className="text-nav text-[16px] lg:text-[20px] font-thin text-center lg:px-36"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
-          ducimus laborum ab, labore placeat eius minus mollitia consectetur
-          esse tenetur provident eveniet dolore ex est sunt natus voluptate,
-          fugiat aspernatur.
+          Listo para aportar mi experiencia y contribuir al éxito de la empresa
+          mientras sigo desarrollándome como profesional.
         </motion.p>
         <motion.div
           variants={container}
@@ -46,7 +44,7 @@ const Contact = () => {
           whileInView={"show"}
           className="flex gap-x-4 flex-wrap items-center justify-center mt-4"
         >
-          <motion.a 
+          <motion.a
             variants={fadeIn("up")}
             href="https://api.whatsapp.com/send?phone=56990914436"
             className="flex-1 text-nav hover:text-terciary flex gap-x-4 items-center justify-center"
@@ -54,7 +52,7 @@ const Contact = () => {
             <AiOutlineWhatsApp className="text-[20px]" />
             Whatsapp
           </motion.a>
-          <motion.a 
+          <motion.a
             variants={fadeIn("up")}
             href="mailto:kevin.pardov26@gmail.com"
             className="flex-1 text-nav hover:text-terciary flex gap-x-4 items-center justify-center"

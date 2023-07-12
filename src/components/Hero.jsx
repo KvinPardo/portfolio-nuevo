@@ -40,7 +40,7 @@ const Hero = () => {
                 variants={fadeIn("left")}
                 className="text-nav lg:text-[40px] font-thin text-[22px]"
               >
-                {title} <strong className="text-terciary ">{subtitle}</strong>
+                {title} <strong className="text-terciary uppercase font-bold">{subtitle}</strong>
               </motion.p>
               <motion.p
                 variants={fadeIn("right")}

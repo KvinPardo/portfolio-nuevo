@@ -14,18 +14,21 @@ const heroData = [
     title: "Soy Programador Analista y",
     subtitle: "Desarrollador Web",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores nemo sed maiores perferendis provident cum, ipsam consequatur omnis dolorum, similique est?",
+      "especializado en la creación y desarrollo de la interfaz de usuario de aplicaciones y páginas web. Mi principal objetivo es construir sitios web visualmente atractivos, interactivos y funcionales para los usuarios finales. ",
   },
 ];
 
 const aboutData = [
   {
     text1:
-      "Hey! I'm Bob, if you haven't already gathered that by now. I'm a painter turned software engineer from Daytona, Florida. I specialize in the backend, primarily Node and Rust, but love building with whatever tools are right for the job.",
+      "Me llamo Kevin Pardo Veas, tengo 27 años, soy una persona entusiasta y apasionado por mi trabajo. Soy una persona altamente motivada, orientado a resultados y con una mentalidad proactiva. Me considero un solucionador de problemas creativo y analítico, capaz de abordar desafíos con una perspectiva innovadora.",
     text2:
-      "Hey! I'm Bob, if you haven't already gathered that by now. I'm a painter turned software engineer from Daytona, Florida. I specialize in the backend, primarily Node and Rust, but love building with whatever tools are right for the job.",
+      " Además, poseo excelentes habilidades de comunicación, tanto en forma escrita como verbal, lo que me permite colaborar eficazmente con equipos multidisciplinarios y transmitir ideas de manera clara y concisa.",
     text3:
-      "Hey! I'm Bob, if you haven't already gathered that by now. I'm a painter turned software engineer from Daytona, Florida. I specialize in the backend, primarily Node and Rust, but love building with whatever tools are right for the job.",
+      "Soy flexible y capaz de adaptarme rápidamente a entornos dinámicos y en constante cambio. Me encanta aprender y estar al tanto de las últimas tendencias y avances en mi campo. Siempre estoy dispuesto a adquirir nuevos conocimientos y habilidades para mejorar mi desempeño profesional.",
+    text4:
+      "Creo en el desarrollo continuo y estoy dispuesto a asumir nuevos desafíos para crecer profesionalmente.",
+
     experience: [
       {
         html: "HTML",
@@ -144,7 +147,6 @@ const experience = [
       },
     ],
   },
-  
 ];
 
 // const experienceMuni = [

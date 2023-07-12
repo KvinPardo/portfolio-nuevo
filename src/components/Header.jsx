@@ -69,7 +69,7 @@ const Header = () => {
           <motion.a
             variants={fadeIn("left")}
             href="kevin-cv.pdf"
-            download="Kevin Pardo CV"
+            download
             target="_blank"
             className="bg-nav p-2 px-4 hover:bg-terciary  hover:text-primary cursor-pointer"
           >

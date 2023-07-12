@@ -67,7 +67,7 @@ const projectsData = [
   {
     id: 1,
     image: "project1",
-    title: "Página de Tatuajes",
+    title: "Landing Algas",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [

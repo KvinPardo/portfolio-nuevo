@@ -53,6 +53,18 @@ const NavMobile = () => {
             <Link
               onClick={handleClick}
               offset={0}
+              to="education"
+              smooth={true}
+              duration={1000}
+              className="cursor-pointer hover:text-terciary transition duration-300"
+            >
+              Educación
+            </Link>
+          </li>
+          <li className="text-nav py-6 text-xl">
+            <Link
+              onClick={handleClick}
+              offset={0}
               to="experience"
               smooth={true}
               duration={1000}

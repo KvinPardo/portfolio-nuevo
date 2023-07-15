@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
-import {
-  AiFillSchedule,
-  AiOutlineHome,
-  AiOutlineSchedule,
-} from "react-icons/ai";
+import { AiFillSchedule, AiOutlineHome, AiOutlineSchedule } from "react-icons/ai";
 import { MdWorkOutline } from "react-icons/md";
 import { AiOutlineProject } from "react-icons/ai";
 import { BsPhoneVibrate } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { IoSchoolSharp } from "react-icons/io5";
 
 const container = {
   hidden: {},
@@ -38,6 +35,11 @@ const Sidebar = () => {
             <motion.li variants={fadeIn("right")}>
               <Link to="about" smooth={true} duration={1000}>
                 <AiFillSchedule className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
+              </Link>
+            </motion.li>
+            <motion.li variants={fadeIn("right")}>
+              <Link to="education" smooth={true} duration={1000}>
+                <IoSchoolSharp className="cursor-pointer w-[30px] h-[30px] text-nav  hover:text-capitalice hover:scale-110 transition-all duration-300" />
               </Link>
             </motion.li>
             <motion.li variants={fadeIn("right")}>

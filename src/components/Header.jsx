@@ -4,6 +4,7 @@ import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 import NavMobile from "./NavMobile";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import CV from "/img/kevin-cv.pdf";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -66,15 +67,14 @@ const Header = () => {
           whileInView={"show"}
           className="lg:flex"
         >
-          <motion.button
+          <motion.a
             variants={fadeIn("left")}
-            href="kevin-cv.pdf"
-            download
-            target="_blank"
+            href={CV}
+            download=""
             className="bg-nav p-2 px-4 hover:bg-terciary  hover:text-primary cursor-pointer"
           >
-            Resumen
-          </motion.button>
+            Descargar CV
+          </motion.a>
         </motion.div>
 
         <div className="lg:hidden ">

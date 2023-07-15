@@ -1,4 +1,5 @@
 const navData = {
+  href: "",
   items: [
     { to: "home", name: "Home" },
     { to: "about", name: "Acerca" },
@@ -29,7 +30,7 @@ const aboutData = [
     text4:
       "Creo en el desarrollo continuo y estoy dispuesto a asumir nuevos desafíos para crecer profesionalmente.",
 
-    experience: [
+    work: [
       {
         html: "HTML",
         css: "CSS",
@@ -37,9 +38,12 @@ const aboutData = [
         boostrap: "Boostrap",
         tailwind: "Tailwind CSS",
         react: "React Js",
+        context: "Context API",
+        router: "React Router DOM",
         wordpress: "WordPress",
         elementor: "Elementor",
         ecommerce: "Ecoomerce",
+        github: "Github",
       },
     ],
   },
@@ -50,39 +54,40 @@ const education = [
     name: "CoderHouse",
     year: "2022",
     title: "Certificado React Js",
+    url: "https://www.coderhouse.cl/certificados/63d94acf992d73000e71a8b7",
   },
   {
     name: "CoderHouse",
     year: "2021 - 2022",
     title: "Certificado JavaScript",
-  },
-  {
-    name: "Instituto Profesional AIEP",
-    year: "2019 - 2022",
-    title: "Técnico en Programación y Análisis de Sistemas",
+    url: "https://www.coderhouse.cl/certificados/622cf25f20161b00251e12c4",
   },
 ];
 
 const projectsData = [
   {
     id: 1,
-    image: "project1",
+    image: "landing-algas",
     title: "Landing Algas",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
+    description: "Landing realizara a Fusion Agency para uno de sus clientes.",
+    urlGithub: "https://github.com/KvinPardo/landing-portafolio",
+    urlDemo: "https://landing-portafolio.vercel.app/",
     tags: [
       {
         firstTag: "HTML",
-        secondTag: "CSS",
+        secondTag: "React Js",
         thirdTag: "Tailwind CSS",
         fourthTag: "Framer Motion",
+        vite: "Vite",
       },
     ],
   },
   {
     id: 2,
-    image: "project1",
-    title: "React 2",
+    image: "coder",
+    title: "Proyecto Ecommerce CoderHouse",
+    urlGithub: "https://github.com/KvinPardo/react-curso-tienda",
+    urlDemo: "https://react-curso-tienda.vercel.app/",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
     tags: [
@@ -91,12 +96,13 @@ const projectsData = [
         secondTag: "CSS",
         thirdTag: "Tailwind CSS",
         fourthTag: "Framer Motion",
+        vite: "Vite",
       },
     ],
   },
   {
     id: 3,
-    image: "project1",
+    image: "",
     title: "React 3",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
@@ -106,12 +112,13 @@ const projectsData = [
         secondTag: "CSS",
         thirdTag: "Tailwind CSS",
         fourthTag: "Framer Motion",
+        vite: "Vite",
       },
     ],
   },
   {
     id: 4,
-    image: "project1",
+    image: "",
     title: "React 4",
     description:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti mollitia quod id nam voluptas eum eos soluta dolores",
@@ -121,6 +128,7 @@ const projectsData = [
         secondTag: "CSS",
         thirdTag: "Tailwind CSS",
         fourthTag: "Framer Motion",
+        vite: "Vite",
       },
     ],
   },

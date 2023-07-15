@@ -17,7 +17,7 @@ const container = {
 };
 
 const ProjectItem = ({ project }) => {
-  const { image, title, description, tags } = project;
+  const { image, title, description, tags, urlGithub, urlDemo } = project;
 
   return (
     <div>
@@ -29,12 +29,12 @@ const ProjectItem = ({ project }) => {
       >
         <motion.div
           variants={fadeIn("left")}
-          className="relative bg-capitalice rounded-[15px] group overflow-hidden"
+          className="relative bg-capitalice rounded-[15px] group overflow-hidden h-[200px] lg:h-[300px]"
         >
           <motion.img
-            src={`${image}.jpg`}
+            src={`/img/${image}.jpg`}
             alt=""
-            className="lg:px-20 px-8 lg:pt-20 pt-8 group-hover:scale-105 transition-all duration-500 origin-top-right "
+            className="lg:px-20 px-8 lg:pt-20 pt-8 group-hover:scale-105 transition-all duration-500 origin-top-right h-full object-cover"
           />
         </motion.div>
         <motion.div
@@ -46,13 +46,13 @@ const ProjectItem = ({ project }) => {
           <div className="flex items-center justify-between w-full">
             <motion.h3
               variants={fadeIn("left")}
-              className="text-nav lg:text-xl w-full"
+              className="text-nav lg:text-xl w-full text-[15px]"
             >
               {title}
             </motion.h3>
             <motion.div
               variants={fadeIn("left")}
-              className="h-[1px] bg-capitalice lg:w-[550px] my-2 mt-5 w-[300px] mr-4"
+              className="h-[1px] bg-capitalice lg:w-[550px] my-2 mt-5 w-[200px] mr-4"
             />
             <motion.div
               variants={container}
@@ -60,10 +60,18 @@ const ProjectItem = ({ project }) => {
               whileInView={"show"}
               className="flex gap-x-4 mr-4"
             >
-              <motion.a variants={fadeIn("left")} href="/">
+              <motion.a
+                variants={fadeIn("left")}
+                href={urlGithub}
+                target="_blank"
+              >
                 <AiFillGithub className="text-2xl text-nav hover:text-terciary" />
               </motion.a>
-              <motion.a variants={fadeIn("left")} href="/">
+              <motion.a
+                variants={fadeIn("left")}
+                href={urlDemo}
+                target="_blank"
+              >
                 <RiLiveLine className="text-2xl text-nav hover:text-terciary" />
               </motion.a>
             </motion.div>

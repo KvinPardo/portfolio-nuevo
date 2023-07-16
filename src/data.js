@@ -1,13 +1,48 @@
-const navData = {
-  href: "",
-  items: [
-    { to: "home", name: "Home" },
-    { to: "about", name: "Acerca" },
-    { to: "experience", name: "Experiencia" },
-    { to: "projects", name: "Proyectos" },
-    { to: "contact", name: "Contacto" },
-  ],
-};
+// nav
+export const nav = [
+  {
+    name: "Home",
+    to: "home",
+    offset: -100,
+  },
+  {
+    name: "About",
+    to: "about",
+    offset: -100,
+  },
+  {
+    name: "Educación",
+    to: "education",
+    offset: 0,
+  },
+  {
+    name: "Experiencia",
+    to: "experience",
+    offset: 0,
+  },
+
+  {
+    name: "Proyectos",
+    to: "projects",
+    offset: -100,
+  },
+  {
+    name: "Contacto",
+    to: "contact",
+    offset: 0,
+  },
+];
+
+// const navData = {
+//   href: "",
+//   items: [
+//     { to: "home", name: "Home" },
+//     { to: "about", name: "Acerca" },
+//     { to: "experience", name: "Experiencia" },
+//     { to: "projects", name: "Proyectos" },
+//     { to: "contact", name: "Contacto" },
+//   ],
+// };
 
 const heroData = [
   {
@@ -176,4 +211,4 @@ const experience = [
 //   },
 // ];
 
-export { navData, heroData, aboutData, projectsData, education, experience };
+export { heroData, aboutData, projectsData, education, experience };

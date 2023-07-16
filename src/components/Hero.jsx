@@ -1,8 +1,9 @@
 import { Link } from "react-scroll";
 import { heroData } from "../data";
-import { BiChevronRight } from "react-icons/bi";
+import { BiChevronRight, BiSolidFilePdf } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import CV from "/img/kevin-cv.pdf";
 
 const container = {
   hidden: {},
@@ -40,7 +41,10 @@ const Hero = () => {
                 variants={fadeIn("left")}
                 className="text-nav lg:text-[40px] font-thin text-[22px]"
               >
-                {title} <strong className="text-terciary uppercase font-bold">{subtitle}</strong>
+                {title}{" "}
+                <strong className="text-terciary uppercase font-bold">
+                  {subtitle}
+                </strong>
               </motion.p>
               <motion.p
                 variants={fadeIn("right")}
@@ -48,16 +52,38 @@ const Hero = () => {
               >
                 {description}
               </motion.p>
-              <motion.div variants={fadeIn("left")}>
-                <Link
-                  to="projects"
-                  smooth={true}
-                  spy={true}
-                  className="btn-lg cursor-pointer lg:w-[250px] w-full mt-4 border-terciary border flex items-center justify-center group hover:bg-terciary hover:text-primary transition duration-300"
+
+              <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView={"show"}
+                className="flex flex-col lg:flex-row items-center gap-x-4 text-nav lg:w-[400px]"
+              >
+                <motion.div variants={fadeIn("left")} className="group">
+                  <Link
+                    to="projects"
+                    smooth={true}
+                    spy={true}
+                    className="p-3 cursor-pointer lg:w-[180px] w-full mt-4 border-terciary bg-terciary border flex items-center justify-center group transition duration-300 text-primary"
+                  >
+                    Ver Proyectos{" "}
+                    <BiChevronRight className="text-2xl group-hover:rotate-90 transition duration-300  text-primary" />
+                  </Link>
+                </motion.div>
+                <motion.div
+                  variants={container}
+                  initial="hidden"
+                  whileInView={"show"}
                 >
-                  Ver Proyectos{" "}
-                  <BiChevronRight className="text-2xl  group-hover:rotate-90 transition duration-300 group-hover:text-primary text-nav" />
-                </Link>
+                  <motion.a
+                    variants={fadeIn("left")}
+                    href={CV}
+                    download=""
+                    className="hover:bg-terciary hover:text-primary p-3 cursor-pointer lg:w-[180px] w-full mt-4 border-terciary border flex items-center justify-center gap-x-2  group-hover:bg-terciary group-hover:text-primary "
+                  >
+                    Resumen CV <BiSolidFilePdf />
+                  </motion.a>
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>
